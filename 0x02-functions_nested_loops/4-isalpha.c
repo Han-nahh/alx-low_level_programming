@@ -1,13 +1,14 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * _isalpha - check for lower case letter
- * @c : character to check
- * Return:0 or 1
+ * _isalpha -Entry point
+ *@c: The character to print
+ *
+ * Return: Always 0.
  */
-
 int _isalpha(int c)
 {
-	return ((c >= 97 && c <= 122) || (c >= 65 && c <= 90));
-
+if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+return (1);
+else
+return (0);
 }

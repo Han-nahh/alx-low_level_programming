@@ -1,14 +1,15 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * _abs - return abs value
- * @n : number to check
- * Return:0 or 1
+ * _abs - Entry point
+ *
+ * @r: r is variable name
+ *
+ * Return: Always 0 (Success)
  */
-
-int _abs(int n)
+int _abs(int r)
 {
-
-return (n >= 0 ? n : n * -1);
-
+if (r < 0)
+return (-r);
+else
+return (r);
 }

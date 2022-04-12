@@ -1,25 +1,44 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
-/**
- * print_to_98 - print to 98
- * @n : number to start from
- * Return:0 or 1
- */
 
+/**
+ * print_to_98 - check the code for Holberton School students.
+ *
+ * @n: n is a variable name
+ *
+ * Return: Always 0.
+ */
 void print_to_98(int n)
 {
+int c;
 
-while (n < 98)
+if (n < 98)
 {
-	printf("%i, ", n);
-	n++;
+for (c = n; c <= 98; c++)
+{
+if (c == 98)
+printf("%d\n", c);
+else
+printf("%d, ", c);
 }
-while (n > 98)
-{
-	printf("%i, ", n);
-	n--;
 }
 
-printf("98");
-putchar('\n');
+if (n > 98)
+{
+for (c = n; c >= 98; c--)
+{
+if (c == 98)
+printf("%d\n", c);
+else
+printf("%d, ", c);
+}
+}
+
+else
+{
+if (n == 98)
+{
+printf("%d\n", n);
+}
+}
 }

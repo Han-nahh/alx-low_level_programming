@@ -1,13 +1,18 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * add - returns the sum of its parameters
- * @a: int type number
- * @b: int type number
- * Return:0
+ * add - check the code for Holberton School students.
+ *
+ * @a: a is a variable name
+ *
+ * @b: b is a variable name
+ *
+ * Return: Always 0.
  */
-
-
 int add(int a, int b)
 {
-return (a + b);
+int sum;
+
+sum = (a + b);
+return (sum);
 }

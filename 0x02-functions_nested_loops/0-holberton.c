@@ -1,19 +1,21 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
  * main - Entry point
- * Return:0
+ * @c: The character to print
+ *
+ * Return: Always 0 (Success)
  */
-
+int _putchar(char c);
 int main(void)
 {
-char c[10] = "Holberton";
-int i = 0;
-while (i < 9)
-{
-_putchar(c[i]);
-i++;
-}
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
 _putchar('\n');
 return (0);
 }
