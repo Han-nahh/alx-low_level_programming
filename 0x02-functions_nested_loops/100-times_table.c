@@ -1,44 +1,31 @@
+/*
+ * File: 100-times_table.c
+ * Auth: Michael Ndungu Kamotho
+ */
+
 #include "main.h"
 
 /**
- * print_times_table - Prints the times table of the input,
- *                     starting with 0.
- * @n: The value of the times table to be printed.
+ * 100-times_table - function that prints the n times table, starting with 0
+ * @c: The character to be checked.
+ *
+ * Return: 1 if character is lowercase, 0 otherwise.
  */
-void print_times_table(int n)
-{
-	int num, mult, prod;
 
-	if (n >= 0 && n <= 15)
-	{
-		for (num = 0; num <= n; num++)
-		{
-			_putchar('0');
-
-			for (mult = 1; mult <= n; mult++)
-			{
-				_putchar(',');
-				_putchar(' ');
-
-				prod = num * mult;
-
-				if (prod <= 99)
-					_putchar(' ');
-				if (prod <= 9)
-					_putchar(' ');
-
-				if (prod >= 100)
-				{
-					_putchar((prod / 100) + '0');
-					_putchar(((prod / 10)) % 10 + '0');
-				}
-				else if (prod <= 99 && prod >= 10)
-				{
-					_putchar((prod / 10) + '0');
-				}
-				_putchar((prod % 10) + '0');
-			}
-			_putchar('\n');
-		}
+void times_table(int n){
+	int number = 0;
+	int by = 0;
+	int result, count;
+	for(count = 0;count < n; count++){
+	
+	   for(count = 0; count < 10; count++){
+	      result = number * by;
+	      by++;
+	      _putchar(result);
+	   }
+	number++;
+	_putchar('\n')
 	}
 }
+
+
