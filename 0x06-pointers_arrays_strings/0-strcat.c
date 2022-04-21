@@ -16,6 +16,6 @@ while(src[j]!='\0'){
 
 
 }
-dest=\0;
+dest='\0';
 return(dest);
 }
