@@ -16,3 +16,15 @@ char *_strcat(char *dest, char *src)
 	}
 	return (dest);
 }
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s)
+	{
+		len += 1;
+		s = s + 1;
+	}
+
+	return (len);
+}
