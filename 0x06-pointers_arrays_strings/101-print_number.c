@@ -25,5 +25,5 @@ for (; divisor >= 1; n %= divisor, divisor /= 10)
 	_putchar('0' + resp);
 
 }
-
+return(n);
 }
