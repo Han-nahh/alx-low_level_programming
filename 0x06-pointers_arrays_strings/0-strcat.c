@@ -1,4 +1,12 @@
-#include "main.h"
+#include "holberton.h"
+
+/**
+ *_strcat - function that concatenates two strings.
+ *@dest: destiny string.
+ *@src: string to append to dest.
+ *
+ *Return: pointer to the resulting string dest.
+ */
 
 char *_strcat(char *dest, char *src)
 {
@@ -16,6 +24,13 @@ char *_strcat(char *dest, char *src)
 	}
 	return (dest);
 }
+
+/**
+ *_strlen - function that returns the length of a string.
+ *@s: string to measute its length.
+ *
+ *Return: int with the length of n.
+ */
 int _strlen(char *s)
 {
 	int len = 0;
