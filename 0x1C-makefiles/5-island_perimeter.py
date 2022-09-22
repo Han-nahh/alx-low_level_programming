@@ -1,25 +1,19 @@
 #!/usr/bin/python3
-""" island_perimeter module """
+"""Provides a function to compute the perimeter of an island"""
 
 
 def island_perimeter(grid):
-    """ find the perimeter of the island described in grid
-    Args:
-        grid: a list of list of integers
-    Return:
-        return perimeter of the island described in grid
-    """
-    result = 0
-    for i in range(0, len(grid)):
-        for j in range(0, len(grid[i])):
-            if grid[i][j] == 1:
-                result += 4
-                if i - 1 >= 0 and grid[i - 1][j] == 1:
-                        result -= 1
-                if i + 1 < len(grid) and grid[i + 1][j] == 1:
-                        result -= 1
-                if j + 1 < len(grid[i]) and grid[i][j + 1] == 1:
-                        result -= 1
-                if j - 1 >= 0 and grid[i][j - 1] == 1:
-                        result -= 1
-    return (result)
+    """Compute the perimeter of an island"""
+    perim = 0
+    for y, row in enumerate(grid):
+        for x, item in enumerate(row):
+            if item == 1:
+                if x == 0 or grid[y][x - 1] == 0:
+                    perim += 1
+                if x == len(row) - 1 or grid[y][x + 1] == 0:
+                    perim += 1
+                if y == 0 or grid[y - 1][x] == 0:
+                    perim += 1
+                if y == len(grid) - 1 or grid[y + 1][x] == 0:
+                    perim += 1
+    return perim
